@@ -4,16 +4,13 @@
 "description": "Sakshi Ghadge portfolio website using Express",
 "main": "app.js",
 "scripts": {
-"start": "node app.js",
-"test": "echo "No test specified""
+"start": "node app.js"
 },
 "keywords": [
 "portfolio",
-"express",
-"web"
+"express"
 ],
 "author": "Sakshi Ghadge",
-"license": "MIT",
 "dependencies": {
 "express": "^4.21.2"
 }
