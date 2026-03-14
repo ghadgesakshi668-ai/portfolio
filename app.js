@@ -1,21 +1,21 @@
 const express = require("express");
-const path = require("path");
-
 const app = express();
-const PORT = 3000;
+const port = 3000;
 
-// static files
-app.use(express.static(path.join(__dirname, "public")));
+// static files (css, images, js)
+app.use(express.static("public"));
 
-// routes
+// Home page
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "pages", "index.html"));
+    res.sendFile(__dirname + "/pages/index.html");
 });
 
-app.get("/projects", (req, res) => {
-  res.sendFile(path.join(__dirname, "pages", "projects.html"));
+// Skills page
+app.get("/skills", (req, res) => {
+    res.sendFile(__dirname + "/pages/my_skills.html");
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+// Start server
+app.listen(port, () => {
+    console.log("Server started on http://localhost:" + port);
 });
